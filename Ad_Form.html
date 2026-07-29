@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <link rel="stylesheet" href="Ad_form.css">
+</head>
+<body>
+    <div class="container">
+        <header>Application</header>
+
+        <form action="#" id="admissionForm">
+            <div class="form-first">
+                <div class="details">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <input type="text" id="name" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input type="date" placeholder="Enter birth date" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>E-mail</label>
+                            <input type="email" id="email" placeholder="Enter your Email" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Phone Number</label>
+                            <input type="number" placeholder="Enter phone number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="gender">Gender</label>
+                            <input list="options" id="gender" name="gender" placeholder="Enter your gender" required>
+                            <datalist id="options">
+                                <option value="Male"></option>
+                                <option value="Female"></option>
+                            </datalist>     
+                        </div>
+
+                        <div class="input-field">
+                            <label for="group">Group</label>
+                            <input list="grp" id="group" name="group" placeholder="Enter your group" required>
+                            <datalist id="grp">
+                                <option value="Science"></option>
+                                <option value="Humanities"></option>
+                                <option value="Commerce"></option>
+                            </datalist>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="details">
+                    <span class="title">Education Details</span>
+
+                    <div class="fields">
+
+                        <div class="input-field">
+                            <label for="ssc">SSC Board</label>
+                            <input list="board" id="ssc" name="ssc" placeholder="SSC Board" required>
+                            <datalist id="board">
+                                <option value="Dhaka"></option>
+                                <option value="Rajshahi"></option>
+                                <option value="Dinajpur"></option>
+                                <option value="Chattogram"></option>
+                                <option value="Sylhet"></option>
+                                <option value="Barisal"></option>
+                                <option value="Cumilla"></option>
+                                <option value="Jashore"></option>
+                                <option value="Mymensingh"></option>
+                            </datalist>
+                        </div>
+
+                        <div class="input-field">
+                            <label>SSC Roll</label>
+                            <input type="number" placeholder="Enter SSC Roll" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>SSC Result</label>
+                            <input type="number" id="ssc-result" placeholder="Enter SSC Result" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="hsc">HSC Board</label>
+                            <input list="board" id="hsc" name="hsc" placeholder="HSC Board" required>
+                            <datalist id="board">
+                                <option value="Dhaka"></option>
+                                <option value="Rajshahi"></option>
+                                <option value="Dinajpur"></option>
+                                <option value="Chattogram"></option>
+                                <option value="Sylhet"></option>
+                                <option value="Barisal"></option>
+                                <option value="Cumilla"></option>
+                                <option value="Jashore"></option>
+                                <option value="Mymensingh"></option>
+                            </datalist>
+                        </div>
+
+                        <div class="input-field">
+                            <label>HSC Roll</label>
+                            <input type="number" placeholder="Enter HSC Roll" required>    
+                        </div>
+
+                        <div class="input-field">
+                            <label>HSC Result</label>
+                            <input type="number" id="hsc-result" placeholder="Enter HSC Result" required>
+                        </div>
+
+                    </div>
+
+                   
+                </div>
+            </div>
+
+
+            <div class="form-second">
+                <div class="details">
+                    <span class="title">Address Details</span>
+
+                    <div class="fields">
+
+                        <div class="input-field">
+                            <label for="address">Address Type</label>
+                            <input list="option" id="address" name="address" placeholder="Enter your Address Type" required>
+                            <datalist id="option">
+                                <option value="Permanent"></option>
+                                <option value="Temporary"></option>
+                            </datalist>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Nationality</label>
+                            <input type="text" id="nationality" placeholder="Enter your Nationality" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Division</label>
+                            <input type="text" placeholder="Enter your Division" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>District</label>
+                            <input type="text" placeholder="Enter your District" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Block Number</label>
+                            <input type="text" placeholder="Enter Block Number" required>     
+                        </div>
+
+                        <div class="input-field">
+                            <label>Ward Number</label>
+                            <input type="text" placeholder="Enter Ward Number" required>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="details">
+                    <span class="title">Family Details</span>
+
+                    <div class="fields">
+
+                        <div class="input-field">
+                            <label>Father's Name</label>
+                            <input type="text" id="fname" placeholder="Father's Name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mother's Name</label>
+                            <input type="text" id="mname" placeholder="Mother's name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Religion</label>
+                            <input type="text"  placeholder="Religion" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Father's Mobile No.</label>
+                            <input type="number" placeholder="Father's Mobile">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mother's Mobile No.</label>
+                            <input type="number" placeholder="Mother's Mobile">    
+                        </div>
+
+                        <div class="input-field">
+                            <label>Signature</label>
+                            <input type="text" id="sig" placeholder="Signature" required>
+                        </div>
+
+                    </div>
+
+                    <button class="nextBtn">
+
+                        <span class="btnText">Submit</span>
+                        
+                     </button>
+
+                   </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="Ad_form.js"></script>
+      
+</body>
+</html>
+</body>
+</html>

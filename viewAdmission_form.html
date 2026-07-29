@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Info</title>
+    <link rel="stylesheet" href="viewAdmission_form.css">
+</head>
+<body>
+    <div class="container">
+        <header>Application Form</header>
+        <img src="Images/ju logo.png" alt="JU logo" width="200px" height="100px">
+        <div id="output" class="output">
+            <pre id="formattedData"></pre>
+           
+        </div>
+        <div class="buttons">
+            <button onclick="downloadData()"><span>Download</span></button>
+            <button onclick="window.print()"><span>Print This Page</span></button>
+        </div>
+        
+    </div>
+
+    <script>
+        // Retrieve form data from localStorage
+        const formData = JSON.parse(localStorage.getItem("formData"));
+
+        if (formData) {
+            // Format the data
+            const formattedData = `
+Full Name: ${formData.name}
+Email: ${formData.email}
+Group: ${formData.group}
+SSC Result: ${formData.sscResult}
+HSC Result: ${formData.hscResult}
+Nationality: ${formData.Nationality}
+Father's Name: ${formData.Father}
+Mother's Name: ${formData.Mother}
+Signature: ${formData.Sign}
+
+
+            `;
+
+            // Display the formatted data
+            document.getElementById("formattedData").textContent = formattedData;
+        }
+
+        // Function to download the formatted data as a text file
+        function downloadData() {
+            const text = document.getElementById("formattedData").textContent;
+            const blob = new Blob([text], { type: "text/plain" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "admission_form_data.txt";
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
